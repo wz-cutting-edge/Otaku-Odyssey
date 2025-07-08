@@ -3,15 +3,138 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background: #f5f6fa;
+  min-height: 100vh;
 }
 
 .parent {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  gap: 16px;
+  gap: 24px;
 }
 
 .parent > div {
-  border: 1px solid black;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+  padding: 24px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  min-height: 300px;
+  transition: box-shadow 0.2s;
+}
+
+.parent > div:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+}
+
+.history,
+.generator,
+.banList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history h3,
+.banList h3,
+.generator h2 {
+  margin-bottom: 16px;
+  color: #3b3b3b;
+  letter-spacing: 1px;
+}
+
+.history-list-item {
+  margin-bottom: 16px;
+  padding: 12px 0 8px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.history-list-item:hover {
+  background: #f0f4ff;
+}
+
+.history-list-item:last-child {
+  border-bottom: none;
+}
+
+.history-list-item img {
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.history-list-item img:hover {
+  transform: scale(1.05);
+}
+
+.generator p {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.anime-card {
+  margin-top: 24px;
   padding: 16px;
+  border-radius: 10px;
+  background: #f8faff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anime-card h2 {
+  margin-bottom: 12px;
+  font-size: 1.3em;
+}
+
+.anime-card button {
+  margin: 6px 4px 0 0;
+  background: #ffeaea;
+  color: #b30000;
+  border: 1px solid #ffb3b3;
+  font-size: 0.95em;
+}
+
+.anime-card button:hover {
+  background: #ffb3b3;
+  color: #fff;
+}
+
+button {
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.2s, color 0.2s;
+}
+
+button:hover {
+  border-color: #646cff;
+  background: #e6eaff;
+  color: #3b3b3b;
+}
+
+@media (max-width: 900px) {
+  .parent {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .parent > div {
+    min-height: 200px;
+  }
+}
+
+.anime-card-img {
+  border-radius: 8px;
 }

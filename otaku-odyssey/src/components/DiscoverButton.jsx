@@ -1,12 +1,9 @@
+import React from 'react';
 
-const discoverButton = () => {
+const DiscoverButton = ({ onClick, loading }) => (
+    <button onClick={onClick} disabled={loading}>
+        {loading ? 'Rolling...' : 'Discover Anime'}
+    </button>
+);
 
-    return(
-        <div>
-
-        </div>
-    )
-
-}
-
-export default discoverButton
+export default DiscoverButton;

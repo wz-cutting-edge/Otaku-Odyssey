@@ -1,13 +1,24 @@
+import React from 'react';
 
-const historyList = () => {
-
-    return(
+const HistoryList = ({ images = [] }) => {
+    return (
         <div>
-            {prevImg}
-            {prevImg.desc}
+            {images.length === 0 ? (
+                <p>No history yet.</p>
+            ) : (
+                images.map((img, idx) => (
+                    <div className="history-list-item" key={idx}>
+                        <img
+                            src={img.coverImage?.large}
+                            alt={img.title?.romaji || 'Anime'}
+                            width={100}
+                        />
+                        <div>{img.title?.romaji}</div>
+                    </div>
+                ))
+            )}
         </div>
-    )
+    );
+};
 
-}
-
-export default historyList
+export default HistoryList;
