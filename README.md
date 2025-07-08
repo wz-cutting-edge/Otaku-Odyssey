@@ -44,7 +44,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![aniGamba](https://github.com/user-attachments/assets/97263a91-d4c7-49c0-9497-d8ff64bee80f)
 
 GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
